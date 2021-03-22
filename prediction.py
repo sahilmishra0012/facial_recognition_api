@@ -37,7 +37,7 @@ def get_faceprint():
         Return Value:
             Processed image and label tensors.
     '''
-    model = tf.keras.models.load_model('facenet_keras.h5', compile=False)
+    model = tf.keras.models.load_model('faceprint.h5', compile=False)
     img = cv2.imread('img.jpeg')
     image = tf.expand_dims(img, 0, name=None)
     print(image.shape)
